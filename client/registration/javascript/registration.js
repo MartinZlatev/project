@@ -36,7 +36,6 @@
 
 /* send the inputted data over to the backend and based on the server's response, display an error message or redirect user to his newly created account */
 async function sendFormData(data) {
-    console.log(data);
     const response = await fetch("../../server/api/registration/register-user.php", {
         method: "POST",
         headers: {
