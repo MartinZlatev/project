@@ -1,0 +1,143 @@
+/* import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+
+    /* font of the page */
+    font-family: 'Roboto', sans-serif;
+
+    /* color variables used later in the code */
+    --fontFrom: #65dfc9;
+    --fontTo: #6cdbeb;
+    --headerColor: #426696;
+    --accountColorFrom: rgba(255, 255, 255, 0.7);
+    --accountColorTo: rgba(255, 255, 255, 0.3);
+    --glassCircleColorFrom: rgba(255, 255, 255, 0.6);
+    --glassCircleColorTo: rgba(255, 255, 255, 0.2);
+    --scheduleShadow: rgba(122, 122, 122, 0.212);
+    --scheduleBackground: rgba(255, 255, 255, 0.4);
+    --optionHoverColor: rgba(255, 255, 255, 0.8);
+}
+
+main {
+    min-height: 100vh;
+
+    background: linear-gradient(to right top, var(--fontFrom), var(--fontTo));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    margin: 0;
+    font-weight: bolder;
+    font-size: larger;
+    color: var(--headerColor);
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+input, button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* account tab */
+
+#account-tab {
+    width: 60%;
+    min-height: 80vh;
+    max-height: 80vh;
+    
+    background: linear-gradient(to right bottom, var(--accountColorFrom), var(--accountColorTo));
+
+    border-radius: 2rem;
+
+    /* make it appear in front of the glass circles */
+    position: absolute;
+    z-index: 2;
+
+    /* blur background glass circles */
+    backdrop-filter: blur(1rem);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* navbar */
+
+#options-menu {
+    /* make the options tab take up 30% of the account tab's space with no growing and shrinking */
+    flex: 1 0 30%;
+
+    border-radius: 2rem;
+    background: linear-gradient(to top left, var(--accountColorTo), var(--accountColorFrom));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+    /* take up all the option menu's width */
+    width: 100%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    border-radius: 2rem;
+}
+
+.option:hover {
+    background: var(--optionHoverColor);
+
+    /* make the background transition 1 second */
+    transition: 1s;
+}
+
+
+.right-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width:65%;
+}
+
+
+#my-account-header {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+#account-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#account-details p {
+    margin: 0.5rem;
+}
+
+
+.no-display {
+    display: none !important;
+}
+

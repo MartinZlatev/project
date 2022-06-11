@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css">
+    <script defer src="javascript/button_reaction.js"></script>
+    <script>
+        /* reload the page on load because the page won't load the user's data when he has set cookies */
+        window.onload = function() {
+            if (!window.location.hash) {
+                window.location = window.location + '#loaded';
+                window.location.reload();
+            }
+        }
+    </script>
+    <title>Home</title>
+</head>
+<body>
+    <main>
+        <section id="account-tab">
+
+            <!-- Navbar -->
+            <nav id="options-menu">
+
+                <div class="option" id="my-account">
+                    <span><h3>Моят акаунт</h3></span>
+                </div>
+
+                <div class="option" id="upload">
+                    <span><h3>Качи снимка</h3></span>
+                </div>
+            </nav>
+
+            <!-- My Account tab -->
+            <section id="my-account-section" class="right-tab">
+
+                <!-- The tab header -->
+                <header id="my-account-header">
+                    <h1>Моят акаунт</h1>
+                </header>
+
+                <!-- The content of the tab -->
+                <article id="account-details">
+
+                    <!-- User picture (for now it is a static one) -->
+                    <div id="user-picture">
+                        <img src="images/sample_user1.png" alt="user-picture">
+                    </div>
+
+                    <p id="firstname"><strong>Име: </strong></p>
+                    <p id="lastname"><strong>Фамилия: </strong></p>
+                    <p id="email"><strong>Имейл: </strong></p>
+                    <p id="user-type"><strong>Тип потребител: </strong></p>
+                    <p><strong>График за днес: </strong></p>
+
+                    <!-- The schedule of the user for today-->
+                    <div class="schedule">
+                    </div>
+                </article>
+
+            </section>
+
+
+            <!-- Upload schedule tab -->
+            <section id="upload-section" class="no-display right-tab">
+                <p>Test</p>
+            </section>
+
+            
+        </section>
+    </main>
+</body>
+</html>
