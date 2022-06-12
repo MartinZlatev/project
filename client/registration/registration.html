@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/registration.css">
+    <link rel="stylesheet" href="../CSS/registration.css">
+    <link rel="stylesheet" href="../CSS/body_main_header.css">
     <script defer src="javascript/registration.js"></script>
     <title>Register</title>
 </head>
+
 <body>
     <main>
 
         <!-- Registration page header -->
         <header>
+            <img src="../login/img/su_logo_imagelarge.png">
             <h1 id="system-name-header">Алумни албум</h1>
         </header>
 
@@ -20,48 +24,49 @@
         <form id="registration-form">
 
             <!-- First name -->
-            <div class="form-item">
-                <label for="name"><span>Име:</span></label>
+            <section class="form-item">
                 <input type="text" placeholder="Въведете име" autocomplete="off" required name="name" id="name">
-            </div>
+            </section>
 
             <!-- E-mail -->
-            <div class="form-item">
-                <label for="email"><span>Имейл:</span></label>
-                <input type="email" placeholder="Въведете имейл" required name="email" id="email">
-            </div>
+            <section class="form-item">
+                <input type="email" placeholder="Въведете e-mail" required name="email" id="email">
+            </section>
 
             <!-- Password -->
-            <div class="form-item">
-                <label for="password"><span>Парола:</span></label>
+            <section class="form-item">
                 <input type="password" placeholder="Въведете парола" required name="password" id="password">
-            </div>
+            </section>
 
             <!-- Repeated password -->
-            <div class="form-item">
-                <label for="repeat-password"><span>Повторете паролата:</span></label>
-                <input type="password" placeholder="Повторете паролата" required name="repeat_password" id="repeat-password">
-            </div>
+            <section class="form-item">
+                <input type="password" placeholder="Повторете паролата" required name="repeat_password"
+                    id="repeat-password">
+            </section>
 
             <!-- User type -->
-            <div class="form-item">
+            <section class="form-item">
                 <label for="course"><span>Курс:</span></label>
                 <select name="course" id="course">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                 </select>
-            </div>
+            </section>
 
-            <div class="form-item">
+            <section class="form-item">
                 <label for="major"><span>Специалност:</span></label>
                 <select name="major" id="major">
                     <option value="Софтуерно инженерство">Софтуерно инженерство</option>
                     <option value="Компютърни науки">Компютърни науки</option>
                     <option value="Информационни системи">Информационни системи</option>
                     <option value="Информатика">Информатика</option>
+                    <option value="Математика">Математика</option>
+                    <option value="Приложна математика">Приложна математика</option>
+                    <option value="Статистика">Статистика</option>
+                    <option value="Математика и информатика">Математика и информатика</option>
                 </select>
-            </div>
+            </section>
 
             <!-- Submit button -->
             <div class="form-item button-container">
@@ -74,4 +79,5 @@
         </form>
     </main>
 </body>
+
 </html>
