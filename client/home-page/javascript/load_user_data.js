@@ -25,8 +25,9 @@ function renderUserData(data) {
     const emailPar = document.getElementById("email");
     const course = document.getElementById("course");
     const major = document.getElementById("major");
+    const image = document.getElementById("profile-image");
 
-
+    image.src = data["path"] ?  `../../server/images/${data["path"]}` : '../../server/images/default.png';
     firstnamePar.innerHTML = firstnamePar.innerHTML.concat(data["name"]);
     emailPar.innerHTML = emailPar.innerHTML.concat(data["email"]);
     course.innerHTML = course.innerHTML.concat(data["course"]);

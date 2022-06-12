@@ -77,4 +77,10 @@ ALTER TABLE `image_instances`
 ALTER TABLE `image_instances`
   ADD CONSTRAINT `image_instances_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `image_instances_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--see if works cuz before there were ptoblems with this alter
+ALTER TABLE 'images'
+  ADD picked boolean
+
+
 COMMIT;

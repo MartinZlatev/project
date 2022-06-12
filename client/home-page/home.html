@@ -9,6 +9,7 @@
     <script defer src="javascript/button_reaction.js"></script>
     <script defer src="javascript/log_out_user.js"></script>
     <script defer src="javascript/load_user_data.js"></script>
+    <script defer src="javascript/load_images.js"></script>
     <!-- <script defer src="javascript/upload_image.js"></script> -->
     <script>
         /* reload the page on load because the page won't load the user's data when he has set cookies */
@@ -47,6 +48,19 @@
                     </span>
                 </div>
 
+                <div class="option" id="pick-image">
+                    <span>
+                        <h3>Избери снимка за алумни албум</h3>
+                    </span>
+                </div>
+
+
+                <div class="option" id="album">
+                    <span>
+                        <h3>Изтегли албум</h3>
+                    </span>
+                </div>
+
                 <div class="option" id="log-out">
                     <span>
                         <h3>Изход</h3>
@@ -67,7 +81,7 @@
 
                     <!-- User picture (for now it is a static one) -->
                     <div id="user-picture">
-                        <!-- to choose picked picture -->
+                        <img id="profile-image" src="../../server/images/default.png">
                     </div>
 
                     <p id="name"><strong>Име: </strong></p>
@@ -94,8 +108,38 @@
 
             <section id="my-images-section" class="no-display right-tab">
                 <h1>All Images</h1>
-                <div id="gallery">
+                <div id="gallery" class="gallery">
                 <script src="javascript/get_my_images.js"></script>
+            </section>
+
+            <section id="pick-image-section" class="no-display right-tab">
+                <h1>Кликни върху снимка, за да я избереш и тя да се показва в албума</h1>
+                <div id="my-gallery" class="gallery">
+                <script src="javascript/pick_from_my_images.js"></script>
+                <div id="pick-image-message"></div>
+            </section>
+
+            <section id="album-section" class="no-display right-tab">
+                <form>
+                    <select required name="major" id="export-major" class="form-input">
+                        <option value="Софтуерно инженерство">Софтуерно инженерство</option>
+                        <option value="Компютърни науки">Компютърни науки</option>
+                        <option value="Информационни системи">Информационни системи</option>
+                        <option value="Информатика">Информатика</option>
+                    </select>
+            
+                    <select required name="course" id="export-course" class="form-input">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="3">4</option>
+                    </select>      
+                </form>
+            
+                <button onclick="loadImages()" name="export-submit" class="form-button">Export Album</button>
+            
+                <div id="export-result">
+                </div>
             </section>
 
 
