@@ -23,7 +23,6 @@
             createErrorDivContent(responseDiv, "Успешно качихте снимката");
         })
         .catch((errorMessage) => {
-            console.log('here');
             createErrorDivContent(responseDiv, errorMessage); // if the upload resulted in an error, then display an error messages
         })
     })
@@ -31,7 +30,6 @@
 
 /* sends the inputted data over to the backend to upload the image */
 async function uploadImage(data) {        
-    console.log(JSON.stringify(data));
     const response = await fetch("../../server/api/upload.php", {
         method: "POST",
         headers: {
@@ -40,7 +38,6 @@ async function uploadImage(data) {
         body: JSON.stringify(data)
     });
     const data_1 = await response.json();
-    console.log(data_1);
     return data_1;
 }
 

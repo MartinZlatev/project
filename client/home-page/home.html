@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/home.css">
     <script defer src="javascript/button_reaction.js"></script>
     <script defer src="javascript/log_out_user.js"></script>
+    <script defer src="javascript/load_user_data.js"></script>
     <!-- <script defer src="javascript/upload_image.js"></script> -->
     <script>
         /* reload the page on load because the page won't load the user's data when he has set cookies */
@@ -40,6 +41,12 @@
                     </span>
                 </div>
 
+                <div class="option" id="my-images">
+                    <span>
+                        <h3>Моите снимки</h3>
+                    </span>
+                </div>
+
                 <div class="option" id="log-out">
                     <span>
                         <h3>Изход</h3>
@@ -60,24 +67,20 @@
 
                     <!-- User picture (for now it is a static one) -->
                     <div id="user-picture">
-                        <img src="images/sample_user1.png" alt="user-picture">
+                        <!-- to choose picked picture -->
                     </div>
 
-                    <p id="firstname"><strong>Име: </strong></p>
-                    <p id="lastname"><strong>Фамилия: </strong></p>
+                    <p id="name"><strong>Име: </strong></p>
                     <p id="email"><strong>Имейл: </strong></p>
-                    <p id="user-type"><strong>Тип потребител: </strong></p>
-                    <p><strong>График за днес: </strong></p>
+                    <p id="major"><strong>Специалност: </strong></p>
+                    <p id="course"><strong>Курс: </strong></p>
 
-                    <!-- The schedule of the user for today-->
-                    <div class="schedule">
-                    </div>
                 </article>
 
             </section>
 
 
-            <!-- Upload schedule tab -->
+            <!-- Upload image tab -->
             <section id="upload-section" class="no-display right-tab">
                 <form action="../../server/api/upload.php" method="POST" enctype="multipart/form-data">
                   <input type="file" name="file" required style="margin:20px 0px;"/>
@@ -86,6 +89,13 @@
                 </div>
 
               </form>
+            </section>
+
+
+            <section id="my-images-section" class="no-display right-tab">
+                <h1>All Images</h1>
+                <div id="gallery">
+                <script src="javascript/get_my_images.js"></script>
             </section>
 
 

@@ -5,7 +5,6 @@
 
 (function() {
     const logOutOption = document.getElementById("log-out");
-    console.log(logOutOption);
 
     logOutOption.addEventListener("click", () => {
         logOut()
