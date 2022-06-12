@@ -26,12 +26,6 @@
                 createErrorDivContent(responseDiv, errorMessage); // if the upload resulted in an error, then display an error messages
             })
 
-
-    })
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        console.log("changes");
     })
 })()
 
