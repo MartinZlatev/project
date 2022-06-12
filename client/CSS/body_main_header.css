@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri', sans-serif;
+
+    /*will place the pale white color*/
+    background-color: #fbfbf2;
+
+    /* color variables, used later in the code */
+
+
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, var(--fontFrom), var(--fontTo));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    position: relative;
+}

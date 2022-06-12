@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/body_main_header.css">
+    <script defer src="javascript/login.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <!-- log in page header -->
+        <header>
+            <img src="img\su_logo_imagelarge.png">
+            <h1 id="system-name-header">Алумни албуми</h1>
+        </header>
+
+        <!-- log in form -->
+        <form id="login-form">
+
+            <!-- email -->
+            <section class="form-item">
+                <input type="email" placeholder="Въведете e-mail" required name="email" id="email">
+            </section>
+
+            <!-- password -->
+            <section class="form-item">
+                <input type="password" placeholder="Въведете парола" required name="password" id="password">
+            </section>
+
+            <!-- submit button -->
+            <section class="form-item button-container">
+                <button type="submit" id="login-button">Вход</button>
+            </section>
+
+            <!-- response when a field was incorrect -->
+            <section class="form-item no-show" id="response-message">
+            </section>
+        </form>
+
+        <!-- button for redirection over to the registration page in case the user doesn't have account -->
+        <section>
+            <h4>Нямате профил?</h4>
+            <button id="to-registration-btn">Регистрирайте се тук!</button>
+        </section>
+    </main>
+</body>
+
+</html>

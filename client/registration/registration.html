@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/registration.css">
+    <link rel="stylesheet" href="../CSS/body_main_header.css">
+    <script defer src="javascript/registration.js"></script>
+    <title>Register</title>
+</head>
+
+<body>
+    <main>
+
+        <!-- Registration page header -->
+        <header>
+            <img src="../login/img/su_logo_imagelarge.png">
+            <h1 id="system-name-header">Алумни албуми</h1>
+        </header>
+
+        <!-- Registration form -->
+        <form id="registration-form">
+
+            <!-- First name -->
+            <section class="form-item">
+                <input type="text" placeholder="Въведете име" autocomplete="off" required name="name" id="name">
+            </section>
+
+            <!-- E-mail -->
+            <section class="form-item">
+                <input type="email" placeholder="Въведете e-mail" required name="email" id="email">
+            </section>
+
+            <!-- Password -->
+            <section class="form-item">
+                <input type="password" placeholder="Въведете парола" required name="password" id="password">
+            </section>
+
+            <!-- Repeated password -->
+            <section class="form-item">
+                <input type="password" placeholder="Повторете паролата" required name="repeat_password"
+                    id="repeat-password">
+            </section>
+
+            <!-- User type -->
+            <section class="form-item">
+                <label for="course"><span>Курс:</span></label>
+                <select name="course" id="course">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </section>
+
+            <section class="form-item">
+                <label for="major"><span>Специалност:</span></label>
+                <select name="major" id="major">
+                    <option value="Софтуерно инженерство">Софтуерно инженерство</option>
+                    <option value="Компютърни науки">Компютърни науки</option>
+                    <option value="Информационни системи">Информационни системи</option>
+                    <option value="Информатика">Информатика</option>
+                    <option value="Математика">Математика</option>
+                    <option value="Приложна математика">Приложна математика</option>
+                    <option value="Статистика">Статистика</option>
+                    <option value="Математика и информатика">Математика и информатика</option>
+                </select>
+            </section>
+
+            <!-- Submit button -->
+            <div class="form-item button-container">
+                <button type="submit" id="register-button">Регистриране</button>
+            </div>
+            <section>
+                <h4>Вече имате профил?</h4>
+                <button id="to-login-btn">Вход</button>
+            </section>
+
+
+            <!-- Response message -->
+            <div class="form-item no-display" id="response-message">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

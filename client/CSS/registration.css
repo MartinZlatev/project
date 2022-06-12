@@ -1,0 +1,151 @@
+/* import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+input, select {
+
+    border-radius: 1rem;
+    border: none;
+
+    box-shadow: 0 0 1rem var(--registrationFrom);
+    outline: none;
+}
+
+/* Registration page header */
+
+#system-name-header {
+    margin-top: 0;
+}
+
+/* Registration form */
+
+#registration-form {
+    max-width: 350px;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 2rem var(--loginShadow);
+    border-radius: 2rem;
+
+    font-size: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: solid;
+    border-color: #a6a2a2;
+    background: #e5e6e4;
+    width: 30%;
+}
+
+
+.form-item {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container {
+    margin-bottom: 0;
+}
+
+.form-item input,select,button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+
+    flex: 1 0 60%;
+    border: solid;
+    border-radius: 2em;
+    width: 100%;
+    border-color: #a6a2a2;
+}
+
+.form-item select{
+    font-size: 13px;
+    padding-left: 4px;
+    width: inherit;
+}
+
+.form-item select option{
+    background-color: #f1f1f1;
+    font-size: 16px;
+}
+
+.form-item label {
+    flex: 1 0 10%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-right: 0.3rem;
+    font-size: 14px;
+}
+
+#register-button {
+    border-radius: 2rem;
+    border: solid #a6a2a2;
+
+    background: linear-gradient(to right top, var(--fontFrom), var(--fontTo));
+}
+
+#register-button:hover {
+    background: #fbfbf2;
+    box-shadow: 0 0 1rem var(--registrationFrom);
+}
+
+#response-message {
+    box-sizing: border-box;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    padding: 1rem;
+
+    justify-content: space-evenly;
+}
+
+#response-message span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+#response-message span p {
+    margin: 0;
+    text-align: center;
+}
+
+#response-message img {
+    width: 80px;
+    height: 70px;
+}
+
+.error {
+    background-color: rgb(255, 77, 77);
+    box-shadow: 0 0 1rem rgba(255, 77, 77, 0.7);
+}
+
+.no-display {
+    display: none !important;
+}
+
+#to-login-btn {
+    text-decoration: underline;
+    border: none;
+    background: none;
+    width: auto;
+}
+h4{
+    display: inline-block;
+}
+
+#to-login-btn:hover {
+    background: #cfd2cd;
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7);
+    border: none;
+}

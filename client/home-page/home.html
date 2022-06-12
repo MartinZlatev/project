@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="../CSS/body_main_header.css">
+
+    <script defer src="javascript/button_reaction.js"></script>
+    <script defer src="javascript/log_out_user.js"></script>
+    <script defer src="javascript/load_user_data.js"></script>
+    <!-- <script defer src="javascript/upload_image.js"></script> -->
+    <script>
+        /* reload the page on load because the page won't load the user's data when he has set cookies */
+        window.onload = function () {
+            if (!window.location.hash) {
+                window.location = window.location + '#loaded';
+                window.location.reload();
+            }
+        }
+    </script>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="option" id="upload">
+            <h3>Качи снимка</h3>
+            <img src="../login/img/file_upload_FILL0_wght400_GRAD0_opsz48.png">
+        </div>
+
+        <h1 id="system-name-header">Алумни албуми</h1>
+
+        <span class="dropdown">
+
+            <button class="dropbtn">&ltИме на профила&gt
+
+                <img id="more-img" src="../login/img/expand_more_FILL0_wght400_GRAD0_opsz48.png">
+
+            </button>
+
+            <span class="dropdown-content">
+                <div class="option" id="my-account">
+                    <h3>Моят акаунт</h3>
+                </div>
+                <div class="option" id="my-images">
+                    <h3>Моите снимки</h3>
+                </div>
+                <div class="option" id="log-out">
+                    <h3>Изход</h3>
+                </div>
+            </span>
+
+        </span>
+    </header>
+
+    <main>
+
+        <section id="account-tab">
+
+            <!-- My Account tab -->
+            <section id="my-account-section" class="right-tab">
+
+                <!-- The tab header -->
+                <header id="my-account-header">
+                    <h1>Моят акаунт</h1>
+                </header>
+
+                <!-- The content of the tab -->
+                <article id="account-details">
+
+                    <!-- User picture (for now it is a static one) -->
+                    <div id="user-picture">
+                        <!-- to choose picked picture -->
+                    </div>
+
+                    <p id="name"><strong>Име: </strong></p>
+                    <p id="email"><strong>Имейл: </strong></p>
+                    <p id="major"><strong>Специалност: </strong></p>
+                    <p id="course"><strong>Курс: </strong></p>
+
+                </article>
+
+            </section>
+
+
+            <!-- Upload image tab -->
+            <section id="upload-section" class="no-display right-tab">
+                <form action="../../server/api/upload.php" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" required style="margin:20px 0px;" />
+                    <div>
+                        <button type="submit" name="submit" class="form-button">Upload your image</button>
+                    </div>
+                </form>
+            </section>
+
+
+            <section id="my-images-section" class="no-display right-tab">
+                <h1>All Images</h1>
+                <div id="gallery">
+                    <script src="javascript/get_my_images.js"></script>
+            </section>
+
+
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+/* import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+h3 {
+    margin: 0;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+h4 {
+    margin: 0;
+}
+
+input,
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* account tab */
+
+#account-tab {
+    width: 60%;
+    min-height: 80vh;
+    max-height: 80vh;
+
+
+    border-radius: 2rem;
+
+    /* make it appear in front of the glass circles */
+    position: absolute;
+    z-index: 0;
+
+    /* blur background glass circles */
+    backdrop-filter: blur(1rem);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* navbar */
+
+#options-menu {
+    /* make the options tab take up 30% of the account tab's space with no growing and shrinking */
+    flex: 1 0 30%;
+
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+    cursor: pointer;
+}
+
+
+.right-tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 65%;
+}
+
+
+#my-account-header {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+#account-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#account-details p {
+    margin: 0.5rem;
+}
+
+
+.no-display {
+    display: none !important;
+}
+
+/* drop down bttn */
+.dropdown {
+    position: relative;
+    float: right;
+}
+
+.dropbtn {
+
+    border-radius: 2rem;
+    font-size: 15px;
+    border: solid #a6a2a2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    width: max-content;
+    border-radius: 2rem;
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+}
+
+.dropdown-content div:hover {
+    background-color: #e5e6e4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+
+
+
+header {
+    text-align: center;
+    border-bottom: solid #a6a2a2;
+}
+
+
+#system-name-header,
+#upload,
+.dropdown {
+    display: inline-block;
+    margin: 20px 30px;
+}
+
+#upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    float: left;
+    border-radius: 2rem;
+    font-size: 15px;
+    border: solid #a6a2a2;
+    padding: 3px 15px 3px 15px;
+    margin: 10px;
+}
+
+#more-img {
+    height: 30px;
+}
+
