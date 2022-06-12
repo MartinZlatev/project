@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/home.css">
     <script defer src="javascript/button_reaction.js"></script>
     <script defer src="javascript/log_out_user.js"></script>
+    <script defer src="javascript/upload_image.js"></script>
     <script>
         /* reload the page on load because the page won't load the user's data when he has set cookies */
         window.onload = function() {
@@ -70,7 +71,22 @@
 
             <!-- Upload schedule tab -->
             <section id="upload-section" class="no-display right-tab">
-                <p>Test</p>
+                <form id="upload-image-form">
+
+                    <!-- image -->
+                    <div class="upload-image">
+                        <label for="image"><span>Снимка:</span></label>
+                        <input type="file" placeholder="въведете адрес на изображението" required name="image" id="upload-image-input">
+                    </div>
+                    
+                    <div class="form-item button-container">
+                        <button type="submit" id="upload-button">Качи снимка</button>
+                    </div>
+
+                    <div class="form-item no-show" id="upload-response-message">
+                    </div>
+
+                </form>
             </section>
 
             
