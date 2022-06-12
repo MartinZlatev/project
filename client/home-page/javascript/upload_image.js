@@ -14,7 +14,7 @@
         // clear the contents from the previous message
         responseDiv.innerHTML = null;
 
-        // send the login data to the server
+        // impoad image to the server
         uploadImage(data)
         .then((responseMessage) => {
             if (responseMessage["status"] === "ERROR") {
@@ -24,15 +24,15 @@
         })
         .catch((errorMessage) => {
             console.log('here');
-            createErrorDivContent(responseDiv, errorMessage); // if the login resulted in an error, then display an error messages
+            createErrorDivContent(responseDiv, errorMessage); // if the upload resulted in an error, then display an error messages
         })
     })
 })()
 
-/* sends the inputted data over to the backend to authenticate the user */
+/* sends the inputted data over to the backend to upload the image */
 async function uploadImage(data) {        
     console.log(JSON.stringify(data));
-    const response = await fetch("../../server/api/upload_image/upload.php", {
+    const response = await fetch("../../server/api/upload.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

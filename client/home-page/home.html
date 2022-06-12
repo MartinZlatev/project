@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,10 +8,10 @@
     <link rel="stylesheet" href="css/home.css">
     <script defer src="javascript/button_reaction.js"></script>
     <script defer src="javascript/log_out_user.js"></script>
-    <script defer src="javascript/upload_image.js"></script>
+    <!-- <script defer src="javascript/upload_image.js"></script> -->
     <script>
         /* reload the page on load because the page won't load the user's data when he has set cookies */
-        window.onload = function() {
+        window.onload = function () {
             if (!window.location.hash) {
                 window.location = window.location + '#loaded';
                 window.location.reload();
@@ -19,6 +20,7 @@
     </script>
     <title>Home</title>
 </head>
+
 <body>
     <main>
         <section id="account-tab">
@@ -27,15 +29,21 @@
             <nav id="options-menu">
 
                 <div class="option" id="my-account">
-                    <span><h3>Моят акаунт</h3></span>
+                    <span>
+                        <h3>Моят акаунт</h3>
+                    </span>
                 </div>
 
                 <div class="option" id="upload">
-                    <span><h3>Качи снимка</h3></span>
+                    <span>
+                        <h3>Качи снимка</h3>
+                    </span>
                 </div>
 
                 <div class="option" id="log-out">
-                    <span><h3>Изход</h3></span>
+                    <span>
+                        <h3>Изход</h3>
+                    </span>
                 </div>
             </nav>
 
@@ -71,26 +79,18 @@
 
             <!-- Upload schedule tab -->
             <section id="upload-section" class="no-display right-tab">
-                <form id="upload-image-form">
+                <form action="../../server/api/upload.php" method="POST" enctype="multipart/form-data">
+                  <input type="file" name="file" required style="margin:20px 0px;"/>
+                  <div>
+                  <button type="submit" name="submit" class="form-button">Upload your image</button>
+                </div>
 
-                    <!-- image -->
-                    <div class="upload-image">
-                        <label for="image"><span>Снимка:</span></label>
-                        <input type="file" placeholder="въведете адрес на изображението" required name="image" id="upload-image-input">
-                    </div>
-                    
-                    <div class="form-item button-container">
-                        <button type="submit" id="upload-button">Качи снимка</button>
-                    </div>
-
-                    <div class="form-item no-show" id="upload-response-message">
-                    </div>
-
-                </form>
+              </form>
             </section>
 
-            
+
         </section>
     </main>
 </body>
+
 </html>

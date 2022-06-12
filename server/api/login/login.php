@@ -17,7 +17,6 @@ else {
     http_response_code(400);
     exit(json_encode(["status" => "ERROR", "message" => "Невалиден JSON формат!"]));
 }
-print_r($user_data);
 $email = $user_data["email"]; // get input email
 $password = $user_data["password"]; // get input password
 $user = ["email" => $email, "password" => $password];
