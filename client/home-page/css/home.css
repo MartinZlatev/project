@@ -1,41 +1,10 @@
 /* import Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-body {
-    margin: 0;
-    box-sizing: border-box;
-
-    /* font of the page */
-    font-family: 'Roboto', sans-serif;
-
-    /* color variables used later in the code */
-    --fontFrom: #65dfc9;
-    --fontTo: #6cdbeb;
-    --headerColor: #426696;
-    --accountColorFrom: rgba(255, 255, 255, 0.7);
-    --accountColorTo: rgba(255, 255, 255, 0.3);
-    --glassCircleColorFrom: rgba(255, 255, 255, 0.6);
-    --glassCircleColorTo: rgba(255, 255, 255, 0.2);
-    --scheduleShadow: rgba(122, 122, 122, 0.212);
-    --scheduleBackground: rgba(255, 255, 255, 0.4);
-    --optionHoverColor: rgba(255, 255, 255, 0.8);
-}
-
-main {
-    min-height: 100vh;
-
-    background: linear-gradient(to right top, var(--fontFrom), var(--fontTo));
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 h3 {
     margin: 0;
     font-weight: bolder;
     font-size: larger;
-    color: var(--headerColor);
     text-align: center;
 }
 
@@ -47,7 +16,8 @@ h4 {
     margin: 0;
 }
 
-input, button {
+input,
+button {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
@@ -58,14 +28,13 @@ input, button {
     width: 60%;
     min-height: 80vh;
     max-height: 80vh;
-    
-    background: linear-gradient(to right bottom, var(--accountColorFrom), var(--accountColorTo));
+
 
     border-radius: 2rem;
 
     /* make it appear in front of the glass circles */
     position: absolute;
-    z-index: 2;
+    z-index: 0;
 
     /* blur background glass circles */
     backdrop-filter: blur(1rem);
@@ -82,7 +51,6 @@ input, button {
     flex: 1 0 30%;
 
     border-radius: 2rem;
-    background: linear-gradient(to top left, var(--accountColorTo), var(--accountColorFrom));
 
     display: flex;
     flex-direction: column;
@@ -91,24 +59,7 @@ input, button {
 }
 
 .option {
-    /* take up all the option menu's width */
-    width: 100%;
-
     cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-
-    border-radius: 2rem;
-}
-
-.option:hover {
-    background: var(--optionHoverColor);
-
-    /* make the background transition 1 second */
-    transition: 1s;
 }
 
 
@@ -117,8 +68,8 @@ input, button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    width:65%;
+
+    width: 65%;
 }
 
 
@@ -139,5 +90,83 @@ input, button {
 
 .no-display {
     display: none !important;
+}
+
+/* drop down bttn */
+.dropdown {
+    position: relative;
+    float: right;
+}
+
+.dropbtn {
+
+    border-radius: 2rem;
+    font-size: 15px;
+    border: solid #a6a2a2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    width: max-content;
+    border-radius: 2rem;
+}
+
+.dropdown-content div {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 10px;
+}
+
+.dropdown-content div:hover {
+    background-color: #e5e6e4;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+
+
+
+header {
+    text-align: center;
+    border-bottom: solid #a6a2a2;
+}
+
+
+#system-name-header,
+#upload,
+.dropdown {
+    display: inline-block;
+    margin: 20px 30px;
+}
+
+#upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    float: left;
+    border-radius: 2rem;
+    font-size: 15px;
+    border: solid #a6a2a2;
+    padding: 3px 15px 3px 15px;
+    margin: 10px;
+}
+
+#more-img {
+    height: 30px;
 }
 

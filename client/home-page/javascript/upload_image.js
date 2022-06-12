@@ -1,6 +1,6 @@
-(function() {
+(function () {
     const input = document.getElementById("upload-image-input");
-    const form = document.getElementById("upload-image-form"); 
+    const form = document.getElementById("upload-image-form");
     const responseDiv = document.getElementById("upload-response-message"); // div which will contain response message
 
     form.addEventListener('submit', (event) => {
@@ -10,26 +10,33 @@
         responseDiv.classList.add("no-show");
 
         // gather the inputted data
-        const data=input.value;
+        const data = input.value;
         // clear the contents from the previous message
         responseDiv.innerHTML = null;
 
         // impoad image to the server
         uploadImage(data)
-        .then((responseMessage) => {
-            if (responseMessage["status"] === "ERROR") {
-                throw new Error(responseMessage["message"]);
-            }
-            createErrorDivContent(responseDiv, "Успешно качихте снимката");
-        })
-        .catch((errorMessage) => {
-            createErrorDivContent(responseDiv, errorMessage); // if the upload resulted in an error, then display an error messages
-        })
+            .then((responseMessage) => {
+                if (responseMessage["status"] === "ERROR") {
+                    throw new Error(responseMessage["message"]);
+                }
+                createErrorDivContent(responseDiv, "Успешно качихте снимката");
+            })
+            .catch((errorMessage) => {
+                createErrorDivContent(responseDiv, errorMessage); // if the upload resulted in an error, then display an error messages
+            })
+
+
+    })
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        console.log("changes");
     })
 })()
 
 /* sends the inputted data over to the backend to upload the image */
-async function uploadImage(data) {        
+async function uploadImage(data) {
     const response = await fetch("../../server/api/upload.php", {
         method: "POST",
         headers: {
@@ -45,3 +52,5 @@ async function uploadImage(data) {
 function createErrorDivContent(div, response) {
     div.innerHTML = response
 }
+
+
