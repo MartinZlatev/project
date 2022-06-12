@@ -71,7 +71,6 @@ try {
         $user = array("id" => $user_id, "name" => $name, "email" => $email, "password" => $hashed_password, "course" => $course, "major" => $major);
         $_SESSION["user"] = $user; // create his session
         $userId = $_SESSION["user"]["id"];
-        print_r($userId);
         // set cookies
         setcookie("email", $email, time() + 600);
         setcookie("password", $password, time() + 600);
