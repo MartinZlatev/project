@@ -1,24 +1,10 @@
 /* import Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-body {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 
-    /* color variables, used later in the code */
-    --fontFrom: #e4b1fa;
-    --fontTo: #d4ecef;
-}
 
-main {
-    min-height: 100vh;
-    background: linear-gradient(to right top, var(--fontFrom), var(--fontTo));
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+img{
+width: 100%;
 }
 
 input {
@@ -32,23 +18,29 @@ input {
 
 #system-name-header {
     margin-top: 0;
+    width: 100%;
 }
 
 /* log in form */
 
 #login-form {
-    min-width: 490px;
-    max-width: 490px;
+    max-width: 300px;
     padding: 2rem;
     box-shadow: 0 0 2rem var(--loginShadow);
     border-radius: 2rem;
 
-    font-size: 1.5rem;
+    font-size: 15px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+    border: solid;
+    border-color: #a6a2a2;
+    background: #e5e6e4;
+    width: 30%;
 }
 
 .form-item {
@@ -63,19 +55,26 @@ input {
     margin-bottom: 0;
 }
 
-.form-item input,button {
-    font-size: 1.5rem;
+.form-item input,
+button {
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
 
     box-sizing: border-box;
     padding: 0.5rem 1rem;
 
     flex-grow: 2;
+
+    border: solid;
+    border-radius: 2em;
+    border-color: #847577;
+
+    width: 100%;
 }
 
 .form-item label {
     flex-grow: 1;
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,9 +83,12 @@ input {
 }
 
 #login-button {
-    border-radius: 1rem;
-    border: solid black;
-    background: linear-gradient(to right top, #aed52073, #ffffff);
+    margin-top: 20px;
+    border-radius: 1em;
+    /* background: linear-gradient(to right top, #aed52073, #ffffff); */
+    font-size: 20px;
+    font-weight: bold;
+    min-width: fit-content;
 }
 
 #login-button:hover {
@@ -130,16 +132,20 @@ input {
 
 /* to registration page button */
 
+h4,
+a {
+    display: inline-block;
+}
+
 #to-registration-btn {
-    flex: 0 0 100%;
-    min-width: 490px;
-    border: solid black;
-    border-radius: 1rem;
-    background: linear-gradient(to right top, #aed52073, #ffffff);
-    box-shadow: 0 0 1rem var(--loginShadow);
+    text-decoration: underline;
+    border: none;
+    background: none;
+    width: auto;
 }
 
 #to-registration-btn:hover {
-    background: linear-gradient(to left top, var(--fontFrom), var(--fontTo));
+    background: #cfd2cd;
     box-shadow: 0 0 1rem rgba(255, 255, 255, 0.7);
+    border: none;
 }
