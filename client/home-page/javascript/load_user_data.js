@@ -30,10 +30,10 @@ function renderUserData(data) {
     const image = document.getElementById("profile-image");
 
     image.src = data["path"] ?  `../../server/images/${data["path"]}` : '../../server/images/default.png';
-    firstnamePar.innerHTML = `Име: ${data["name"]}`;
-    emailPar.innerHTML = `E-mail: ${data["email"]}`;
-    course.innerHTML = `Курс: ${data["course"]}`;
-    major.innerHTML = `Специалност: ${data["major"]}`;
+    firstnamePar.innerHTML = `${data["name"]}`;
+    emailPar.innerHTML = `${data["email"]}`;
+    course.innerHTML = `${data["course"]}`;
+    major.innerHTML = `${data["major"]}`;
 }
 
 function renderUserName(data){

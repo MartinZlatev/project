@@ -25,7 +25,7 @@ h3 {
     gap: 10px;
 }
 
-#my-images-section{
+#my-images-section {
     width: 100%;
 }
 
@@ -50,7 +50,7 @@ h3 {
     max-width: 400px;
 }
 
-#pick-image-section{
+#pick-image-section {
     width: 100%;
 }
 
@@ -68,16 +68,23 @@ h3 {
     flex-flow: column nowrap;
     justify-content: space-between;
 }
-#export-form{
+
+#export-form {
     margin-bottom: 10px;
 }
+
+
+.user-info{
+display: block;
+}
+
 .user-album-info {
     font-family: "Architects Daughter", cursive;
     font-size: 25px;
     align-self: center;
 }
 
-.form-input{
+.form-input {
     box-sizing: border-box;
     padding: 0.5rem 1rem;
     flex: 1 0 60%;
@@ -108,7 +115,17 @@ button {
     display: block;
 }
 
-#pick-image-section{
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label,
+label+p {
+    display: inline-block;
+}
+
+#pick-image-section {
     font-size: 15px;
 }
 
@@ -116,7 +133,7 @@ input[type="file" i] {
     font-weight: normal;
 }
 
-#pick-image-message{
+#pick-image-message {
     font-size: 20px;
     margin-left: 40%;
 
@@ -131,14 +148,14 @@ input[type="file" i] {
     background: #d2f1e4;
 }
 
-#album-section{
-    display:flex;
+#album-section {
+    display: flex;
     flex-flow: column nowrap;
     align-items: center;
 }
 
 #account-tab {
-  
+
     width: 80%;
     min-height: 80vh;
     max-height: 80vh;
@@ -176,7 +193,7 @@ input[type="file" i] {
     font-size: 1.2rem;
 }
 
-#account-details{
+#account-details {
     padding-top: 20px;
 }
 
