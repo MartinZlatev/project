@@ -11,6 +11,8 @@
     else {
         throw new Error(data["message"]);
     }
+
+    renderUserName(data["data"]);
 })()
 
 // send a GET request to the backend in order to recieve the user's data
@@ -32,4 +34,9 @@ function renderUserData(data) {
     emailPar.innerHTML = `E-mail: ${data["email"]}`;
     course.innerHTML = `Курс: ${data["course"]}`;
     major.innerHTML = `Специалност: ${data["major"]}`;
+}
+
+function renderUserName(data){
+    const headerName = document.getElementById("header-name");
+    headerName.innerText = data["name"];
 }
