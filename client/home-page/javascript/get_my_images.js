@@ -1,5 +1,5 @@
 (async function getMyImages(){
-    const allImageList= document.getElementById("gallery");
+    const responseDiv= document.getElementById("gallery");
     const fetched = await fetch("../../server/api/list_images/load-my-images.php", {
         headers: {
             "Content-Type": "application/json",
