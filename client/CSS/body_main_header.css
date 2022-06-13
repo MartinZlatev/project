@@ -2,11 +2,11 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: monospace;
-    background-color: #ffffff;
+    background-color: #fbfbf2;
 }
 
 main {
-    min-height: 100vh;
+    margin-top: 200px;
     background: linear-gradient(to right top, var(--fontFrom), var(--fontTo));
 
     display: flex;

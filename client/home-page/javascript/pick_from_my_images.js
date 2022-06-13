@@ -27,7 +27,7 @@ async function setPicked(path) {
     const fetched = await fetch(`../../server/api/pick_image/pick-my-image.php?path=${[path]}`)
     const response = await fetched.json();
     if (response["status"] === "SUCCESS") {
-        messageDiv.innerHTML = "Успешно избрахте снимката";
+        messageDiv.innerHTML = "🎉✨Успешно избрахте снимката!🎉✨";
     } else {
         messageDiv.innerHTML = "Грешка";
         console.log('грешката брат');

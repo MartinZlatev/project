@@ -11,7 +11,10 @@ h3 {
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    gap: 30px;
+    border: none;
+    background: #e7e7e7;
+    padding: 20px;
 }
 
 #export-result {
@@ -32,9 +35,19 @@ h3 {
     justify-content: center;
 }
 
-.my-image {
-    border: solid 1px black;
+.my-image,
+.pick-my-image {
     display: flex;
+    transition: opacity .1s linear;
+}
+
+.pick-my-image:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.pick-my-image:click::after {
+    border: solid black;
 }
 
 .album-image {
@@ -48,17 +61,8 @@ h3 {
     align-self: center;
 }
 
-.pick-my-image {
-    border: solid 1px black;
-    display: flex;
-}
 
-.pick-my-image img {
-    max-width: 100%;
-    max-height: 100%;
-    align-self: center;
-}
-
+.pick-my-image img,
 .my-image img {
     max-width: 100%;
     max-height: 100%;
@@ -80,8 +84,18 @@ button {
     display: block;
 }
 
+#pick-image-section{
+    font-size: 15px;
+}
+
 input[type="file" i] {
     font-weight: normal;
+}
+
+#pick-image-message{
+    font-size: 20px;
+    margin-left: 40%;
+
 }
 
 .form-button {
@@ -94,9 +108,9 @@ input[type="file" i] {
 }
 
 #account-tab {
-    min-height: 80vh;
-    max-height: 80vh;
-
+  
+    padding: 20px;
+    margin-top: 576px;
     border-radius: 2rem;
 
     /* make it appear in front of the glass circles */
@@ -139,6 +153,7 @@ input[type="file" i] {
 
 #account-details p {
     margin: 0.5rem;
+    font-size: 20px;
 }
 
 
@@ -244,4 +259,9 @@ header {
 
 img+section {
     display: inline-block;
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 0px;
 }
