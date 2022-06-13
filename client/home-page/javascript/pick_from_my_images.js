@@ -9,11 +9,14 @@
     const response = await fetched.json();
     for (image of response["data"]) {
         (function (image) {
+            console.log('here');
+            const div= document.createElement('div');
+            div.classList.add('pick-my-image');
             const img = document.createElement('img');
             img.src = `../../server/images/${image["path"]}`
-            console.log(image["path"]);
             img.addEventListener("click", () => setPicked(image["path"]));
-            pickAllImageList.appendChild(img);
+            div.appendChild(img);
+            pickAllImageList.appendChild(div);
         })(image);
     }
 })()
