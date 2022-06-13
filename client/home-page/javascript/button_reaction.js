@@ -9,8 +9,13 @@
                 if (option.id + "-section" === section.id) { // display only the corresponding section
                     section.classList.remove("no-display");
                 }
+
                 else { // hide the rest
                     section.classList.add("no-display");
+                }
+                
+                if(option.id === 'my-account'){
+                    window.location.reload();
                 }
             }
         });

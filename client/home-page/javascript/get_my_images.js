@@ -12,6 +12,6 @@
         const img = document.createElement('img');
         img.src= `../../server/images/${image["path"]}`
         div.appendChild(img);
-        allImageList.appendChild(div);  
+        responseDiv.appendChild(div);  
     }
 })()
