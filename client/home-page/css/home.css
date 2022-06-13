@@ -39,6 +39,20 @@ h3 {
     text-align: center;
 }
 
+#gallery{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+}
+
+.my-image{
+    border: solid 1px black;
+}
+
+img{
+    max-width:100%;
+    max-height:100%;
+}
+
 p {
     margin: 0;
 }
