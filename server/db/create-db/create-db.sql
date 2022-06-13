@@ -4,8 +4,8 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-CREATE DATABASE IF NOT EXISTS `alumni_album2` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `alumni_album2`;
+CREATE DATABASE IF NOT EXISTS `alumni_album` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `alumni_album`;
 
 
 CREATE TABLE `users` (
@@ -77,4 +77,10 @@ ALTER TABLE `image_instances`
 ALTER TABLE `image_instances`
   ADD CONSTRAINT `image_instances_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `image_instances_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--see if works cuz before there were ptoblems with this alter
+ALTER TABLE 'images'
+  ADD picked boolean
+
+
 COMMIT;

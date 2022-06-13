@@ -28,15 +28,26 @@ try {
     $db = new DB();
     $connection = $db->getConnection();
 
-    $sql = "SELECT name,email,major,course 
-            FROM users 
-            WHERE id = :id";
+    $sql = "SELECT name,email,major,course, images.path
+            FROM users join image_instances on users.id = image_instances.user_id join images on image_instances.image_id = images.id
+            WHERE users.id = :id AND images.picked=true LIMIT 1";
 
     $stmt = $connection->prepare($sql);
     $stmt->execute(["id" => $user_id]);
 
     $user_data = $stmt->fetch(PDO::FETCH_ASSOC); // only one row will be returned from the database since we filter our search by id which is unique
-    
+
+    if(! $user_data ){ //user has not picked his picture
+        $sql2 = "SELECT name,email,major,course
+                FROM users
+                Where users.id = :id";
+
+        $stmt = $connection->prepare($sql2);
+        $stmt->execute(["id" => $user_id]); 
+
+        $user_data = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+    }
     http_response_code(200);
     exit(json_encode(["status" => "SUCCESS", "data" => $user_data]));
 }
