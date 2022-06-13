@@ -171,6 +171,7 @@ button {
 
     width: max-content;
     border-radius: 2rem;
+    margin-left: -210px; /*magic number needs editing*/
 }
 
 .dropdown-content div {
@@ -188,18 +189,13 @@ button {
 .dropdown:hover .dropdown-content {
     border: solid #a6a2a2;
     display: block;
-    margin-left: -240px; /*magic number needs editing*/
+  
 }
-
-
-
-
 
 header {
     text-align: center;
     border-bottom: solid #a6a2a2;
 }
-
 
 #system-name-header,
 #upload,

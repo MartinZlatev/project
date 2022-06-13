@@ -1,14 +1,8 @@
 body {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Calibri', sans-serif;
-
-    /*will place the pale white color*/
+    font-family: monospace;
     background-color: #fbfbf2;
-
-    /* color variables, used later in the code */
-
-
 }
 
 main {
@@ -21,6 +15,6 @@ main {
     align-items: center;
 }
 
-header{
+header {
     position: relative;
 }
