@@ -35,6 +35,7 @@ h3 {
 .my-image{
     border: solid 1px black;
     display: flex;
+    justify-content: center
 }
 
 .album-image{
@@ -51,6 +52,7 @@ h3 {
 .pick-my-image{
     border: solid 1px black;
     display: flex;
+    justify-content: center
 }
 
 .pick-my-image img{
