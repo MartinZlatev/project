@@ -8,60 +8,60 @@ h3 {
     text-align: center;
 }
 
-.gallery{
+.gallery {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
 }
 
-#export-result{
+#export-result {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
 }
 
-.album-image img{
-    max-width:100%;
-    max-height:100%;
+.album-image img {
+    max-width: 100%;
+    max-height: 100%;
     align-self: center;
 }
 
-.user-album-image{
+.user-album-image {
     height: 95%;
     display: flex;
     justify-content: center;
 }
 
-.my-image{
+.my-image {
     border: solid 1px black;
     display: flex;
 }
 
-.album-image{
+.album-image {
     border: solid 1px red;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
 }
 
-.user-album-info{
+.user-album-info {
     align-self: center;
 }
 
-.pick-my-image{
+.pick-my-image {
     border: solid 1px black;
     display: flex;
 }
 
-.pick-my-image img{
-    max-width:100%;
-    max-height:100%;
+.pick-my-image img {
+    max-width: 100%;
+    max-height: 100%;
     align-self: center;
 }
 
-.my-image img{
-    max-width:100%;
-    max-height:100%;
+.my-image img {
+    max-width: 100%;
+    max-height: 100%;
     align-self: center;
 }
 
@@ -75,14 +75,25 @@ h4 {
 
 input,
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: inherit;
     font-weight: bold;
+    display: block;
 }
 
-/* account tab */
+input[type="file" i] {
+    font-weight: normal;
+}
+
+.form-button {
+    padding: 10px;
+    border-radius: 1em;
+    font-size: 20px;
+    min-width: fit-content;
+    font-weight: normal;
+    background: #d2f1e4;
+}
 
 #account-tab {
-    width: 60%;
     min-height: 80vh;
     max-height: 80vh;
 
@@ -98,6 +109,7 @@ button {
     display: flex;
     justify-content: space-between;
 }
+
 
 
 /* navbar */
@@ -124,10 +136,6 @@ button {
     font-size: 1.2rem;
 }
 
-#account-details {
-    display: flex;
-    flex-direction: column;
-}
 
 #account-details p {
     margin: 0.5rem;
@@ -144,7 +152,7 @@ button {
     float: right;
 }
 
-#dropdown-field{
+#dropdown-field {
     border-radius: 2rem;
     font-size: 15px;
     border: solid #a6a2a2;
@@ -159,6 +167,7 @@ button {
     border: none;
     padding: 10px;
     font-size: 20px;
+    margin-left: 5px;
 }
 
 .dropdown-content {
@@ -171,7 +180,8 @@ button {
 
     width: max-content;
     border-radius: 2rem;
-    margin-left: -210px; /*magic number needs editing*/
+    margin-left: -210px;
+    /*magic number needs editing*/
 }
 
 .dropdown-content div {
@@ -189,7 +199,7 @@ button {
 .dropdown:hover .dropdown-content {
     border: solid #a6a2a2;
     display: block;
-  
+
 }
 
 header {
@@ -205,6 +215,7 @@ header {
 }
 
 #upload {
+    background-color: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -221,3 +232,16 @@ header {
     height: 30px;
 }
 
+#upload-section {
+    margin: auto;
+}
+
+#profile-image {
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img+section {
+    display: inline-block;
+}

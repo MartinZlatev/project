@@ -83,15 +83,14 @@
                 <article id="account-details">
 
                     <!-- User picture (for now it is a static one) -->
-                    <div id="user-picture">
-                        <img id="profile-image" src="../../server/images/default.png">
-                    </div>
+                    <img id="profile-image" src="../../server/images/default.png">
 
-                    <p id="name"><strong></strong></p>
-                    <p id="email"><strong>Имейл: </strong></p>
-                    <p id="major"><strong>Специалност: </strong></p>
-                    <p id="course"><strong>Курс: </strong></p>
-
+                    <section>
+                        <p id="name"><strong></strong></p>
+                        <p id="email"><strong>Имейл: </strong></p>
+                        <p id="major"><strong>Специалност: </strong></p>
+                        <p id="course"><strong>Курс: </strong></p>
+                    </section>
                 </article>
 
             </section>
@@ -100,11 +99,8 @@
             <!-- Upload image tab -->
             <section id="upload-section" class="no-display">
                 <form action="../../server/api/upload.php" method="POST" enctype="multipart/form-data">
-                    <input type="file" name="file" required style="margin:20px 0px;" />
-                    <div>
-                        <button type="submit" name="submit" class="form-button">Upload your image</button>
-                    </div>
-
+                    <input type="file" name="file" accept="image/*" required style="margin:20px 0px;" />
+                    <button type="submit" name="submit" class="form-button">Upload your image</button>
                 </form>
             </section>
 
