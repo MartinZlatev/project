@@ -39,6 +39,7 @@ h3 {
 .pick-my-image {
     display: flex;
     transition: opacity .1s linear;
+    flex-flow: column nowrap
 }
 
 .pick-my-image:hover {
