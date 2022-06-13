@@ -29,6 +29,7 @@ h3 {
 .user-album-image{
     height: 95%;
     display: flex;
+    justify-content: center;
 }
 
 .my-image{
