@@ -57,7 +57,7 @@
                     <h3>Избери снимка за алумни албум</h3>
                 </div>
                 <div class="option" id="album">
-                    <h3>Изтегли албум</h3>
+                    <h3>Покажи алумни албум</h3>
                 </div>
                 <div class="option" id="log-out">
                     <h3>Изход</h3>
@@ -119,23 +119,27 @@
             </section>
 
             <section id="album-section" class="no-display">
-                <form>
+                <form id="export-form">
                     <select required name="major" id="export-major" class="form-input">
                         <option value="Софтуерно инженерство">Софтуерно инженерство</option>
                         <option value="Компютърни науки">Компютърни науки</option>
                         <option value="Информационни системи">Информационни системи</option>
                         <option value="Информатика">Информатика</option>
+                        <option value="Математика">Математика</option>
+                        <option value="Приложна математика">Приложна математика</option>
+                        <option value="Статистика">Статистика</option>
+                        <option value="Математика и информатика">Математика и информатика</option>
                     </select>
 
                     <select required name="course" id="export-course" class="form-input">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
-                        <option value="3">4</option>
+                        <option value="4">4</option>
                     </select>
                 </form>
 
-                <button onclick="loadImages()" name="export-submit" class="form-button">Export Album</button>
+                <button onclick="loadImages()" name="export-submit" class="form-button">Покажи албум</button>
 
                 <div id="export-result">
                 </div>

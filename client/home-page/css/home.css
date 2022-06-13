@@ -15,12 +15,18 @@ h3 {
     border: none;
     background: #e7e7e7;
     padding: 20px;
+    justify-items: center;
 }
 
 #export-result {
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
+}
+
+#my-images-section{
+    width: 100%;
 }
 
 .album-image img {
@@ -39,7 +45,13 @@ h3 {
 .pick-my-image {
     display: flex;
     transition: opacity .1s linear;
-    flex-flow: column nowrap
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: 400px;
+}
+
+#pick-image-section{
+    width: 100%;
 }
 
 .pick-my-image:hover {
@@ -52,16 +64,27 @@ h3 {
 }
 
 .album-image {
-    border: solid 1px red;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
 }
-
+#export-form{
+    margin-bottom: 10px;
+}
 .user-album-info {
+    font-family: "Architects Daughter", cursive;
+    font-size: 25px;
     align-self: center;
 }
 
+.form-input{
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    flex: 1 0 60%;
+    border: solid;
+    border-radius: 2em;
+    border-color: #a6a2a2;
+}
 
 .pick-my-image img,
 .my-image img {
@@ -108,21 +131,23 @@ input[type="file" i] {
     background: #d2f1e4;
 }
 
+#album-section{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
 #account-tab {
   
-    padding: 20px;
-    margin-top: 576px;
+    width: 80%;
+    min-height: 80vh;
+    max-height: 80vh;
     border-radius: 2rem;
-
-    /* make it appear in front of the glass circles */
     position: absolute;
     z-index: 0;
-
-    /* blur background glass circles */
     backdrop-filter: blur(1rem);
-
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
@@ -151,6 +176,9 @@ input[type="file" i] {
     font-size: 1.2rem;
 }
 
+#account-details{
+    padding-top: 20px;
+}
 
 #account-details p {
     margin: 0.5rem;
@@ -196,7 +224,7 @@ input[type="file" i] {
 
     width: max-content;
     border-radius: 2rem;
-    margin-left: -210px;
+    margin-left: -85px;
     /*magic number needs editing*/
 }
 
@@ -221,6 +249,7 @@ input[type="file" i] {
 header {
     text-align: center;
     border-bottom: solid #a6a2a2;
+    padding-bottom: 10px;
 }
 
 #system-name-header,
