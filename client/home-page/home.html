@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="../CSS/body_main_header.css">
+
+    <script defer src="javascript/button_reaction.js"></script>
+    <script defer src="javascript/log_out_user.js"></script>
+    <script defer src="javascript/load_user_data.js"></script>
     <script defer src="javascript/button_reaction.js"></script>
     <script defer src="javascript/log_out_user.js"></script>
     <script defer src="javascript/load_user_data.js"></script>
@@ -24,49 +29,48 @@
 </head>
 
 <body>
-    <main>
-        <section id="account-tab">
 
-            <!-- Navbar -->
-            <nav id="options-menu">
+    <header>
 
+        <div class="option" id="upload">
+            <h3>Качи снимка</h3>
+            <img src="../login/img/file_upload_FILL0_wght400_GRAD0_opsz48.png">
+        </div>
+
+        <h1 id="system-name-header">Алумни албуми</h1>
+
+        <span class="dropdown">
+
+            <button class="dropbtn">&ltИме на профила&gt
+
+                <img id="more-img" src="../login/img/expand_more_FILL0_wght400_GRAD0_opsz48.png">
+
+            </button>
+
+            <span class="dropdown-content">
                 <div class="option" id="my-account">
-                    <span>
-                        <h3>Моят акаунт</h3>
-                    </span>
+                    <h3>Моят акаунт</h3>
                 </div>
-
-                <div class="option" id="upload">
-                    <span>
-                        <h3>Качи снимка</h3>
-                    </span>
-                </div>
-
                 <div class="option" id="my-images">
-                    <span>
-                        <h3>Моите снимки</h3>
-                    </span>
+                    <h3>Моите снимки</h3>
                 </div>
-
                 <div class="option" id="pick-image">
-                    <span>
-                        <h3>Избери снимка за алумни албум</h3>
-                    </span>
+                    <h3>Избери снимка за алумни албум</h3>
                 </div>
-
-
                 <div class="option" id="album">
-                    <span>
-                        <h3>Изтегли албум</h3>
-                    </span>
+                    <h3>Изтегли албум</h3>
                 </div>
-
                 <div class="option" id="log-out">
-                    <span>
-                        <h3>Изход</h3>
-                    </span>
+                    <h3>Изход</h3>
                 </div>
-            </nav>
+            </span>
+
+        </span>
+    </header>
+
+    <main>
+
+        <section id="account-tab">
 
             <!-- My Account tab -->
             <section id="my-account-section" class="right-tab">
@@ -97,26 +101,26 @@
             <!-- Upload image tab -->
             <section id="upload-section" class="no-display right-tab">
                 <form action="../../server/api/upload.php" method="POST" enctype="multipart/form-data">
-                  <input type="file" name="file" required style="margin:20px 0px;"/>
-                  <div>
-                  <button type="submit" name="submit" class="form-button">Upload your image</button>
-                </div>
+                    <input type="file" name="file" required style="margin:20px 0px;" />
+                    <div>
+                        <button type="submit" name="submit" class="form-button">Upload your image</button>
+                    </div>
 
-              </form>
+                </form>
             </section>
 
 
             <section id="my-images-section" class="no-display right-tab">
                 <h1>All Images</h1>
                 <div id="gallery" class="gallery">
-                <script src="javascript/get_my_images.js"></script>
+                    <script src="javascript/get_my_images.js"></script>
             </section>
 
             <section id="pick-image-section" class="no-display right-tab">
                 <h1>Кликни върху снимка, за да я избереш и тя да се показва в албума</h1>
                 <div id="my-gallery" class="gallery">
-                <script src="javascript/pick_from_my_images.js"></script>
-                <div id="pick-image-message"></div>
+                    <script src="javascript/pick_from_my_images.js"></script>
+                    <div id="pick-image-message"></div>
             </section>
 
             <section id="album-section" class="no-display right-tab">
@@ -127,24 +131,16 @@
                         <option value="Информационни системи">Информационни системи</option>
                         <option value="Информатика">Информатика</option>
                     </select>
-            
+
                     <select required name="course" id="export-course" class="form-input">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="3">4</option>
-                    </select>      
+                    </select>
                 </form>
-            
+
                 <button onclick="loadImages()" name="export-submit" class="form-button">Export Album</button>
-            
+
                 <div id="export-result">
                 </div>
-            </section>
-
-
-        </section>
-    </main>
-</body>
-
-</html>

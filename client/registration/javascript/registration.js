@@ -4,6 +4,12 @@
 
     const responseDiv = document.getElementById("response-message"); // the div that will contain the error message if the backend returned an error
 
+    const toLoginBtn = document.getElementById("to-login-btn"); // button, redirecting to the login page
+
+    toLoginBtn.addEventListener('click', () => {
+        window.location.href = "../login/login.html"; // redirect the user over to the registration page with an option to go back from the browser
+    });
+
     form.addEventListener('submit', (event) => {
         event.preventDefault(); // prevent the form from resetting
 
