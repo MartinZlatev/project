@@ -14,9 +14,37 @@ h3 {
     gap: 10px;
 }
 
+#export-result{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    gap: 10px;
+}
+
+.album-image img{
+    max-width:100%;
+    max-height:100%;
+    align-self: center;
+}
+
+.user-album-image{
+    height: 95%;
+    display: flex;
+}
+
 .my-image{
     border: solid 1px black;
     display: flex;
+}
+
+.album-image{
+    border: solid 1px red;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.user-album-info{
+    align-self: center;
 }
 
 .pick-my-image{
