@@ -9,7 +9,6 @@
     const response = await fetched.json();
     for (image of response["data"]) {
         (function (image) {
-            console.log('here');
             const div= document.createElement('div');
             div.classList.add('pick-my-image');
             const img = document.createElement('img');
@@ -21,15 +20,13 @@
     }
 })()
 async function setPicked(path) {
-    console.log('here');
     const messageDiv = document.getElementById("pick-image-message");
     messageDiv.innerHTML = ""
     const fetched = await fetch(`../../server/api/pick_image/pick-my-image.php?path=${[path]}`)
     const response = await fetched.json();
     if (response["status"] === "SUCCESS") {
-        messageDiv.innerHTML = "Успешно избрахте снимката";
+        messageDiv.innerHTML = "🎉✨Успешно избрахте снимката!🎉✨";
     } else {
         messageDiv.innerHTML = "Грешка";
-        console.log('грешката брат');
     }
 }

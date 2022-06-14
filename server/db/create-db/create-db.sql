@@ -78,9 +78,49 @@ ALTER TABLE `image_instances`
   ADD CONSTRAINT `image_instances_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `image_instances_ibfk_2` FOREIGN KEY (`image_id`) REFERENCES `images` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
---see if works cuz before there were ptoblems with this alter
-ALTER TABLE 'images'
-  ADD picked boolean
+ALTER TABLE `images`
+  ADD picked boolean;
+
+INSERT INTO `users`(`id`, `name`, `email`, `password`, `course`, `major`) VALUES 
+(1,'Мартин Златев','mzlatev@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(2,'Йоанна Благоева','yblagoeva@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(3,'Джейлян Садъкова','dsadukova@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(4,'Полина Петрова','ppetrova@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(5,'Ана Стоянова','astoyanova@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(6,'Виктор Венков','vvenkov@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(7,'Даниел Георгиев','dgeorgiev@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(8,'Даниел Янев','dyanev@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(9,'Аргир Бояджиев','aboyadzhiev@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(10,'Иван Станчев','istanchev@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство'),
+(11,'Иво Песев','ipesev@uni-sofia.bg','$2y$10$MemJBUxr9rKSFOa9pJchgugKg49ae0pjzPT36wUrIenhdewAtLWOO',3,'Софтуерно инженерство');
+
+INSERT INTO `images`(`id`, `number_instances`,`path`, `original_filename`, `picked`) 
+VALUES 
+(1,1,'martin.jpg','martin.jpg',1),
+(2,1,'yo.jpg','yo.jpg',1),
+(3,1,'djey.jpg','djey.jpg',1),
+(4,1,'poli.jpg','poli.jpg',1),
+(5,1,'ani.jpg','ani.jpg',1),
+(6,1,'viktorv.jpg','viktorv.jpg',1),
+(7,1,'danig.jpg','danig.jpg',1),
+(8,1,'daniq.jpg','daniq.jpg',1),
+(9,1,'argir.jpg','argir.jpg',1),
+(10,1,'ivan.jpg','ivan.jpg',1),
+(11,1,'ivo.jpg','ivo.jpg',1);
 
 
-COMMIT;
+INSERT INTO `image_instances`(`id`, `user_id`, `image_id`) 
+VALUES 
+(1,1,1),
+(2,2,2),
+(3,3,3),
+(4,4,4),
+(5,5,5),
+(6,6,6),
+(7,7,7),
+(8,8,8),
+(9,9,9),
+(10,10,10),
+(11,11,11);
+
+

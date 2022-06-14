@@ -1,5 +1,5 @@
  (function() {
-    const options = document.querySelectorAll("div.option"); // returns "Изход" option so we need to be careful not to add another event listener to it
+    const options = document.querySelectorAll("div.option"); 
     const sections = document.querySelectorAll("#account-tab > section");
     for (let option of options) {
 

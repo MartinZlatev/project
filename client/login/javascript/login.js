@@ -58,5 +58,13 @@ function checkLoginData(data) {
 
 // ??
 function createErrorDivContent(div, response) {
-    div.innerHTML = response
+    div.classList.add("error");
+    div.classList.remove("no-show");
+
+    let messageContainer = document.createElement("span");
+    let responseMessage = document.createElement("p");
+    responseMessage.textContent = response;
+    messageContainer.appendChild(responseMessage);
+
+    div.appendChild(messageContainer);
 }

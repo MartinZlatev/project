@@ -13,8 +13,9 @@ if (isset($_GET['course']) && isset($_GET['major'])){
     }
     else {
         #   Get images with given major and course
-        $sql = "SELECT DISTINCT images.path,images.id FROM images 
+        $sql = "SELECT DISTINCT images.path,images.id,users.name FROM images 
         join image_instances on images.id = image_instances.image_id
+        join users on users.id = image_instances.user_id
         where images.picked = true AND image_instances.id IN (
         select image_instances.id 
         from image_instances

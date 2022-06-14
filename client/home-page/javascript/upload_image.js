@@ -20,7 +20,7 @@
             if (responseMessage["status"] === "ERROR") {
                 throw new Error(responseMessage["message"]);
             }
-            createErrorDivContent(responseDiv, "Успешно качихте снимката");
+            createErrorDivContent(responseDiv, "🎉✨Успешно качихте снимката🎉✨");
         })
         .catch((errorMessage) => {
             createErrorDivContent(responseDiv, errorMessage); // if the upload resulted in an error, then display an error messages
