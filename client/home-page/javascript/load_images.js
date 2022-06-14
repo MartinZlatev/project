@@ -6,7 +6,6 @@ async function loadImages(){
 
     const fetched = await fetch(`../../server/api/album/export-album.php?course=${course}&major=${major}`);
     const response= await fetched.json();
-    console.log(response["data"]);
     const data = await response["data"];
     
     for( const image of data){
