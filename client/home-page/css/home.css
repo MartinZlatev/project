@@ -8,62 +8,96 @@ h3 {
     text-align: center;
 }
 
-.gallery{
+.gallery {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    border: none;
+    background: #403a3a0f;
+    padding: 20px;
+    justify-items: center;
+}
+
+#export-result {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
 }
 
-#export-result{
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-    gap: 10px;
+#my-images-section {
+    width: 100%;
 }
 
-.album-image img{
-    max-width:100%;
-    max-height:100%;
+.album-image img {
+    max-width: 100%;
+    max-height: 100%;
     align-self: center;
 }
 
-.user-album-image{
+.user-album-image {
     height: 95%;
     display: flex;
     justify-content: center;
 }
 
-.my-image{
-    border: solid 1px black;
+.my-image,
+.pick-my-image {
     display: flex;
-    justify-content: center
+    transition: opacity .1s linear;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: 400px;
 }
 
-.album-image{
-    border: solid 1px red;
+#pick-image-section {
+    width: 100%;
+}
+
+.pick-my-image:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.pick-my-image:click::after {
+    border: solid black;
+}
+
+.album-image {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    background-color: #403a3a0f;
 }
 
-.user-album-info{
+#export-form {
+    margin-bottom: 10px;
+}
+
+
+.user-info{
+display: block;
+}
+
+.user-album-info {
+    font-family: "Architects Daughter", cursive;
+    font-size: 25px;
     align-self: center;
 }
 
-.pick-my-image{
-    border: solid 1px black;
-    display: flex;
-    justify-content: center
+.form-input {
+    box-sizing: border-box;
+    padding: 0.5rem 1rem;
+    flex: 1 0 60%;
+    border: solid;
+    border-radius: 2em;
+    border-color: #a6a2a2;
 }
 
-.pick-my-image img{
-    max-width:100%;
-    max-height:100%;
-    align-self: center;
-}
-
-.my-image img{
-    max-width:100%;
-    max-height:100%;
+.pick-my-image img,
+.my-image img {
+    max-width: 100%;
+    max-height: 100%;
     align-self: center;
 }
 
@@ -77,29 +111,63 @@ h4 {
 
 input,
 button {
-    font-family: 'Roboto', sans-serif;
+    font-family: inherit;
+    font-weight: bold;
+    display: block;
+}
+
+label {
+    font-size: 20px;
     font-weight: bold;
 }
 
-/* account tab */
+label,
+label+p {
+    display: inline-block;
+}
+
+#pick-image-section {
+    font-size: 15px;
+}
+
+input[type="file" i] {
+    font-weight: normal;
+}
+
+#pick-image-message {
+    font-size: 20px;
+    margin-left: 40%;
+
+}
+
+.form-button {
+    padding: 10px;
+    border-radius: 1em;
+    font-size: 20px;
+    min-width: fit-content;
+    font-weight: normal;
+    background: #d2f1e4;
+}
+
+#album-section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
 
 #account-tab {
-    width: 60%;
+
+    width: 80%;
     min-height: 80vh;
     max-height: 80vh;
-
     border-radius: 2rem;
-
-    /* make it appear in front of the glass circles */
     position: absolute;
     z-index: 0;
-
-    /* blur background glass circles */
     backdrop-filter: blur(1rem);
-
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
+
 
 
 /* navbar */
@@ -116,6 +184,12 @@ button {
     align-items: center;
 }
 
+#system-name-header{
+    font-size: 40px;
+    color: #515151;
+    font-family: Amita, cursive;
+}
+
 .option {
     cursor: pointer;
 }
@@ -127,12 +201,12 @@ button {
 }
 
 #account-details {
-    display: flex;
-    flex-direction: column;
+    padding-top: 20px;
 }
 
 #account-details p {
     margin: 0.5rem;
+    font-size: 20px;
 }
 
 
@@ -146,7 +220,7 @@ button {
     float: right;
 }
 
-#dropdown-field{
+#dropdown-field {
     border-radius: 2rem;
     font-size: 15px;
     border: solid #a6a2a2;
@@ -161,6 +235,7 @@ button {
     border: none;
     padding: 10px;
     font-size: 20px;
+    margin-left: 5px;
 }
 
 .dropdown-content {
@@ -173,7 +248,8 @@ button {
 
     width: max-content;
     border-radius: 2rem;
-    margin-left: -210px; /*magic number needs editing*/
+    margin-left: -85px;
+    /*magic number needs editing*/
 }
 
 .dropdown-content div {
@@ -191,12 +267,13 @@ button {
 .dropdown:hover .dropdown-content {
     border: solid #a6a2a2;
     display: block;
-  
+
 }
 
 header {
     text-align: center;
     border-bottom: solid #a6a2a2;
+    padding-bottom: 10px;
 }
 
 #system-name-header,
@@ -207,6 +284,7 @@ header {
 }
 
 #upload {
+    background-color: #f1f1f1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -223,3 +301,21 @@ header {
     height: 30px;
 }
 
+#upload-section {
+    margin: auto;
+}
+
+#profile-image {
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img+section {
+    display: inline-block;
+}
+
+h1 {
+    font-size: 25px;
+    margin-top: 0px;
+}

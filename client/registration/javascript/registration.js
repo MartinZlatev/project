@@ -53,7 +53,16 @@ async function sendFormData(data) {
     return data_2;
 }
 
-//??
+
 function showDiv(div, message) {
-    div.innerHTML=message;  
+
+    div.classList.add("error");
+    div.classList.remove("no-display");
+
+    let messageContainer = document.createElement("span");
+    let responseMessage = document.createElement("p");
+    responseMessage.textContent = message;
+    messageContainer.appendChild(responseMessage);
+
+    div.appendChild(messageContainer);
 }
